@@ -1,22 +1,12 @@
 public class Main {
     public static void main(String[] args) {
+        int initialAccount = 100;
+        int added = 1100;
 
-        int balance = 100;
-        int clientOrder1 = 100;
-        int clientOrder2 = 1100;
-        int countBonus = 0;
+        int bonus = added > 1000 ? added / 100 :0;
+        int finalAccount = initialAccount + added + bonus;
 
-
-        if (clientOrder1 == 100) {
-            balance = balance + clientOrder1;
-        }
-        System.out.println(balance);
-
-        if (clientOrder2 == 1100) {
-            countBonus = clientOrder2 / 100;
-        }
-
-        balance = +clientOrder2 + clientOrder1 + countBonus;
-        System.out.println(balance);
+        System.out.println("Итоговый счёт: " + finalAccount);
+        System.out.println("Бонус: " + bonus);
     }
 }
